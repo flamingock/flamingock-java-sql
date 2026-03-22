@@ -2,9 +2,9 @@ name: Validate Conventional Commits
 
 on:
   push:
-    branches: [develop, master]
+    branches: [master, release/*]
   pull_request:
-    branches: [develop, master]
+    branches: [master, release/*]
 
 jobs:
   commitlint:
