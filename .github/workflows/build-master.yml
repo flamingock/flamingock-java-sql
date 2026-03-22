@@ -10,11 +10,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Java
-        uses: graalvm/setup-graalvm@v1
+        uses: actions/setup-java@v4
         with:
           java-version: '17'
-          distribution: 'graalvm-community'
-          github-token: ${{ secrets.FLAMINGOCK_JRELEASER_GITHUB_TOKEN }}
+          distribution: 'temurin'
 
       - name: Unit and Integration tests
         run: |
