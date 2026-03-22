@@ -1,0 +1,7 @@
+id: insert-test-data
+transactional: true
+template: sql-template
+targetSystem:
+  id: "sql"
+apply: "INSERT INTO sql_template_test (id, name, role) VALUES (1, 'Admin', 'superuser'); INSERT INTO sql_template_test (id, name, role) VALUES (2, 'Backup', 'readonly')"
+rollback: "DELETE FROM sql_template_test WHERE id IN (1, 2)"

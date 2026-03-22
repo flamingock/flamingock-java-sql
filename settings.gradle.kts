@@ -1,0 +1,6 @@
+rootProject.name = "flamingock-java-sql"
+
+//////////////////////////////////////
+// TEMPLATES
+//////////////////////////////////////
+include("flamingock-java-template-sql")

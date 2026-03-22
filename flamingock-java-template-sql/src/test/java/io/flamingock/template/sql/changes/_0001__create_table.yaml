@@ -1,0 +1,7 @@
+id: create-test-table
+transactional: true
+template: sql-template
+targetSystem:
+  id: "sql"
+apply: "CREATE TABLE sql_template_test (id INT PRIMARY KEY, name VARCHAR(100), role VARCHAR(50))"
+rollback: "DROP TABLE sql_template_test"

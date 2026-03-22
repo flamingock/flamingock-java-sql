@@ -1,0 +1,4 @@
+pipeline:
+  stages:
+    - description: "SQL template integration changes"
+      location: "io.flamingock.template.sql.changes"
