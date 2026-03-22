@@ -10,7 +10,7 @@ on:
 
 jobs:
   release-module:
-    uses: ./.github/workflows/module-release-graalvm.yml
+    uses: ./.github/workflows/module-release.yml
     with:
       module: ${{ inputs.module }}
     secrets:

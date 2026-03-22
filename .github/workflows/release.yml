@@ -37,7 +37,7 @@ jobs:
 
   release:
     needs: [build]
-    uses: ./.github/workflows/module-release-graalvm.yml
+    uses: ./.github/workflows/module-release.yml
     secrets:
       FLAMINGOCK_JRELEASER_GITHUB_TOKEN: ${{ secrets.FLAMINGOCK_JRELEASER_GITHUB_TOKEN }}
       FLAMINGOCK_JRELEASER_MAVENCENTRAL_USERNAME: ${{ secrets.FLAMINGOCK_JRELEASER_MAVENCENTRAL_USERNAME }}
