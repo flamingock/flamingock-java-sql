@@ -3,7 +3,7 @@ val flamingockVersion: String by rootProject.extra
 
 dependencies {
     implementation("io.flamingock:flamingock-template-api:$templateApiVersion")
-    implementation("io.flamingock:sql-util:$flamingockVersion")
+    implementation(project(":flamingock-java-sql-util"))
 
     testAnnotationProcessor("io.flamingock:flamingock-processor:$flamingockVersion")
     testAnnotationProcessor(files(sourceSets.main.get().output))
