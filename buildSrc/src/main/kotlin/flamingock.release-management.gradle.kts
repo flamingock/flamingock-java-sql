@@ -20,19 +20,12 @@ val allProjects = project.extra["allProjects"] as Set<String>
 
 // Release configuration
 val module: String? = project.findProperty("module") as String?
-val releaseBundle: String? = project.findProperty("releaseBundle") as String?
 
 val projectsToRelease = if (module != null) {
     require(allProjects.contains(module)) { "$module is not within the releasable modules $allProjects" }
     setOf(module)
 } else {
-    val templateProjects = project.extra["templateProjects"] as Set<String>
-
-    when (releaseBundle) {
-        "templates" -> templateProjects
-        "all" -> allProjects
-        else -> setOf()
-    }
+    allProjects
 }
 
 // JReleaser configuration
