@@ -2,13 +2,16 @@
   "permissions": {
     "allow": [
       "Bash(SRC=/Users/dieppa/workspace/flamingock/library/flamingock-java/utils/sql-util/src/main/java/io/flamingock/internal/common/sql)",
-      "Bash(DST_MAIN=/Users/dieppa/workspace/flamingock/library/flamingock-java-sql/flamingock-java-sql-util/src/main/java/io/flamingock/internal/common/sql)",
-      "Bash(DST_TEST=/Users/dieppa/workspace/flamingock/library/flamingock-java-sql/flamingock-java-sql-util/src/test/java/io/flamingock/internal/common/sql)",
+      "Bash(DST_MAIN=/Users/dieppa/workspace/flamingock/library/flamingock-java-sql/flamingock-sql-util/src/main/java/io/flamingock/internal/common/sql)",
+      "Bash(DST_TEST=/Users/dieppa/workspace/flamingock/library/flamingock-java-sql/flamingock-sql-util/src/test/java/io/flamingock/internal/common/sql)",
       "Bash(cp \"$SRC/SqlDialect.java\" \"$DST_MAIN/\")",
       "Bash(cp \"$SRC/SqlDialectFactory.java\" \"$DST_MAIN/\")",
       "Bash(./gradlew clean:*)",
       "Bash(./gradlew spotlessApply 2>&1)",
-      "Bash(./gradlew spotlessCheck 2>&1)"
+      "Bash(./gradlew spotlessCheck 2>&1)",
+      "Bash(find /Users/dieppa/workspace/flamingock/library/flamingock-java-sql -type f \\\\\\(-name pom.xml -o -name MANIFEST.MF -o -name *.properties -o -name *.yml -o -name *.yaml -o -name *.xml \\\\\\) ! -path */build/* ! -path */.gradle/* ! -path */.idea/*)",
+      "Bash(find /Users/dieppa/workspace/flamingock/library/flamingock-java-sql -type f \\\\\\(-name README* -o -name *.md \\\\\\) ! -path */build/* ! -path */.gradle/* ! -path */.idea/*)",
+      "Bash(./gradlew build:*)"
     ]
   }
 }
