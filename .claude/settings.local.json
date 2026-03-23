@@ -11,7 +11,22 @@
       "Bash(./gradlew spotlessCheck 2>&1)",
       "Bash(find /Users/dieppa/workspace/flamingock/library/flamingock-java-sql -type f \\\\\\(-name pom.xml -o -name MANIFEST.MF -o -name *.properties -o -name *.yml -o -name *.yaml -o -name *.xml \\\\\\) ! -path */build/* ! -path */.gradle/* ! -path */.idea/*)",
       "Bash(find /Users/dieppa/workspace/flamingock/library/flamingock-java-sql -type f \\\\\\(-name README* -o -name *.md \\\\\\) ! -path */build/* ! -path */.gradle/* ! -path */.idea/*)",
-      "Bash(./gradlew build:*)"
+      "Bash(./gradlew build:*)",
+      "Bash(mvn clean:*)",
+      "Bash(./gradlew :flamingock-sql-template:test)",
+      "Bash(grep:*)",
+      "Bash(./gradlew :flamingock-sql-template:test --tests \"io.flamingock.template.sql.SqlTemplateTest\" --tests \"io.flamingock.template.sql.SqlTemplateConfigTest\" --tests \"io.flamingock.template.sql.SqlTemplateIntegrationTest\")",
+      "Bash(./gradlew :flamingock-sql-util:clean :flamingock-sql-util:build :flamingock-sql-template:clean :flamingock-sql-template:test --tests \"io.flamingock.template.sql.SqlTemplateTest.happyPath\")",
+      "Bash(jar tf:*)",
+      "Bash(javap -c -p /Users/dieppa/.gradle/caches/modules-2/files-2.1/io.flamingock/flamingock-auditstore-sql/1.2.0-beta.4/37223604a6bdb3134185367dadb575b088642926/flamingock-auditstore-sql-1.2.0-beta.4.jar!/io/flamingock/store/sql/internal/SqlLockService.class)",
+      "Read(//private/tmp/**)",
+      "Bash(jar xf:*)",
+      "Bash(javap -c -p io/flamingock/store/sql/internal/SqlLockService.class)",
+      "Bash(./gradlew :flamingock-sql-template:dependencies --configuration testRuntimeClasspath)",
+      "Bash(./gradlew :flamingock-sql-util:publishToMavenLocal)",
+      "Bash(./gradlew :flamingock-sql-util:clean :flamingock-sql-util:publishToMavenLocal)",
+      "Bash(javap -c /tmp/io/flamingock/internal/common/sql/dialectHelpers/SqlLockDialectHelper.class)",
+      "Bash(javap -c -p /tmp/io/flamingock/internal/common/sql/dialectHelpers/SqlLockDialectHelper.class)"
     ]
   }
 }
