@@ -9,4 +9,4 @@ include("flamingock-sql-test-util")
 //////////////////////////////////////
 // TEMPLATES
 //////////////////////////////////////
-include("flamingock-template-sql")
+include("flamingock-sql-template")
