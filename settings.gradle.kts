@@ -4,6 +4,7 @@ rootProject.name = "flamingock-java-sql"
 // UTILS
 //////////////////////////////////////
 include("flamingock-sql-util")
+include("flamingock-sql-test-util")
 
 //////////////////////////////////////
 // TEMPLATES

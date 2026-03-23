@@ -5,6 +5,7 @@
 
 val allProjects = setOf(
     "flamingock-sql-util",
+    "flamingock-sql-test-util",
     "flamingock-template-sql"
 )
 
