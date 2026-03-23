@@ -6,7 +6,7 @@
 val allProjects = setOf(
     "flamingock-sql-util",
     "flamingock-sql-test-util",
-    "flamingock-template-sql"
+    "flamingock-sql-template"
 )
 
 fun Project.isLibraryModule(): Boolean = project != rootProject

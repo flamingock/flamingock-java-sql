@@ -19,7 +19,7 @@ allprojects {
     version = "1.3.0-SNAPSHOT"
 
     extra["templateApiVersion"] = "1.3.1"
-    extra["flamingockVersion"] = "1.2.0-beta.2"
+    extra["flamingockVersion"] = "1.2.0-beta.4"//for tests
 
     repositories {
         mavenLocal()
