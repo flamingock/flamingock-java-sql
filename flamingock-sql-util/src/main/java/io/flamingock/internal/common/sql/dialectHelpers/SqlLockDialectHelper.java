@@ -51,10 +51,17 @@ public final class SqlLockDialectHelper {
             case MYSQL:
             case MARIADB:
             case SQLITE:
-            case H2:
                 return String.format(
                         "CREATE TABLE IF NOT EXISTS %s (" +
                                 "`key` VARCHAR(255) PRIMARY KEY," +
+                                "status VARCHAR(32)," +
+                                "owner VARCHAR(255)," +
+                                "expires_at TIMESTAMP" +
+                                ")", tableName);
+            case H2:
+                return String.format(
+                        "CREATE TABLE IF NOT EXISTS %s (" +
+                                "\"key\" VARCHAR(255) PRIMARY KEY," +
                                 "status VARCHAR(32)," +
                                 "owner VARCHAR(255)," +
                                 "expires_at TIMESTAMP" +
@@ -240,6 +247,7 @@ public final class SqlLockDialectHelper {
         switch (sqlDialect) {
             case POSTGRESQL:
             case ORACLE:
+            case H2:
                 return String.format("DELETE FROM %s WHERE \"key\" = ?", tableName);
             case INFORMIX:
             case DB2:
@@ -248,7 +256,7 @@ public final class SqlLockDialectHelper {
                 return String.format("DELETE FROM %s WHERE lock_key = ?", tableName);
             case SQLSERVER:
                 return String.format("DELETE FROM %s WHERE [key] = ?", tableName);
-            default: // MYSQL, MARIADB, SQLITE, H2
+            default: // MYSQL, MARIADB, SQLITE
                 return String.format("DELETE FROM %s WHERE `key` = ?", tableName);
         }
     }
