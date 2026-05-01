@@ -7,7 +7,7 @@ dependencies {
 
     testAnnotationProcessor("io.flamingock:flamingock-processor:$flamingockVersion")
     testAnnotationProcessor(files(sourceSets.main.get().output))
-    testImplementation("io.flamingock:flamingock-auditstore-sql:$flamingockVersion")
+    testImplementation("io.flamingock:flamingock-sql-auditstore:$flamingockVersion")
     testImplementation("com.zaxxer:HikariCP:4.0.3")
     testImplementation("com.h2database:h2:2.1.214")
     testImplementation("org.testcontainers:testcontainers:1.19.8")

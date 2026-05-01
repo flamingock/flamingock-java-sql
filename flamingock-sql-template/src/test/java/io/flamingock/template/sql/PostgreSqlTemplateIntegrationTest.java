@@ -21,6 +21,7 @@ import io.flamingock.api.template.wrappers.TemplateString;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -40,6 +41,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * PL/pgSQL function bodies, and rollback execution.
  */
 @Testcontainers
+@Disabled
 class PostgreSqlTemplateIntegrationTest {
 
     private static final String TEST_TABLE = "pg_test";

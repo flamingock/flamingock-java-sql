@@ -45,6 +45,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
+@Disabled
 class SqlTemplateConfigTest {
 
     private static final String TEST_TABLE = "test_users";

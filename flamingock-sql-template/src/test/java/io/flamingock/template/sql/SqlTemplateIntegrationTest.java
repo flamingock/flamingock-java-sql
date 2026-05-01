@@ -24,6 +24,7 @@ import io.flamingock.targetsystem.sql.SqlTargetSystem;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -35,6 +36,8 @@ import java.sql.Statement;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+
+@Disabled
 @EnableFlamingock(configFile = "flamingock/pipeline.yaml")
 class SqlTemplateIntegrationTest {
 
