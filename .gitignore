@@ -1,6 +1,7 @@
 # Gradle
 .gradle/
 build/
+!buildSrc/src/main/kotlin/io/flamingock/build/
 
 # IDE
 .idea/
