@@ -62,10 +62,6 @@ public class SqlTemplate extends AbstractChangeTemplate<SqlTemplateConfig, Templ
 
     private static final Logger logger = LoggerFactory.getLogger(SqlTemplate.class);
 
-    public SqlTemplate() {
-        super();
-    }
-
     @ApplyTemplate
     public void apply(Connection connection) {
         execute(connection, applyPayload.getValue());
