@@ -22,7 +22,7 @@ allprojects {
     val declaredVersion = "1.3.2-SNAPSHOT"
     version = VersionManager.resolveVersion(declaredVersion, project.hasProperty("release"))
 
-    extra["templateApiVersion"] = "1.3.4"
+    extra["templateApiVersion"] = "1.3.2"
     extra["flamingockVersion"] = "1.2.1"//for tests
 
     repositories {
