@@ -53,7 +53,8 @@ import java.util.List;
  * executed via {@link java.sql.Statement#execute(String)}.
  *
  * <p>The {@code rollback} payload is optional ({@code rollbackPayloadRequired = false}).
- * If absent or blank, {@link #rollback(Connection)} is a no-op.
+ * If absent, the framework skips the rollback method entirely. If present, the framework's
+ * {@code TemplateString} validation rejects null or blank values at pipeline load time.
  *
  * @see SqlTemplateConfig for configuration options
  */
@@ -69,10 +70,7 @@ public class SqlTemplate extends AbstractChangeTemplate<SqlTemplateConfig, Templ
 
     @RollbackTemplate
     public void rollback(Connection connection) {
-        if (rollbackPayload != null && rollbackPayload.getValue() != null
-                && !rollbackPayload.getValue().trim().isEmpty()) {
-            execute(connection, rollbackPayload.getValue());
-        }
+        execute(connection, rollbackPayload.getValue());
     }
 
     private void execute(Connection connection, String sql) {

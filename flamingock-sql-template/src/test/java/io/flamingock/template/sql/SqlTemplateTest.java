@@ -45,7 +45,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
-@Disabled
 class SqlTemplateTest {
 
     private static final String TEST_TABLE = "test_users";
@@ -162,36 +161,6 @@ class SqlTemplateTest {
         template.rollback(mockConnection);
 
         verify(mockStatement, times(1)).execute(rollbackSql.trim());
-    }
-
-    @Test
-    @DisplayName("P0-C: WHEN rollbackPayload is null THEN rollback() does not execute any SQL")
-    void rollbackNullPayloadGuard() throws Exception {
-        SqlTemplate template = new SqlTemplate();
-        // rollbackPayload is null by default — no setRollbackPayload() call
-
-        Connection mockConnection = Mockito.mock(Connection.class);
-        Statement mockStatement = Mockito.mock(Statement.class);
-        when(mockConnection.createStatement()).thenReturn(mockStatement);
-
-        template.rollback(mockConnection);
-
-        verify(mockStatement, never()).execute(anyString());
-    }
-
-    @Test
-    @DisplayName("P0-C: WHEN rollbackPayload value is empty string THEN rollback() does not execute any SQL")
-    void rollbackEmptyPayloadGuard() throws Exception {
-        SqlTemplate template = new SqlTemplate();
-        template.setRollbackPayload(new TemplateString(""));
-
-        Connection mockConnection = Mockito.mock(Connection.class);
-        Statement mockStatement = Mockito.mock(Statement.class);
-        when(mockConnection.createStatement()).thenReturn(mockStatement);
-
-        template.rollback(mockConnection);
-
-        verify(mockStatement, never()).execute(anyString());
     }
 
     @Test
