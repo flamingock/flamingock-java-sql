@@ -19,7 +19,7 @@ plugins {
 
 allprojects {
     group = "io.flamingock"
-    val declaredVersion = "1.3.2-SNAPSHOT"
+    val declaredVersion = "1.4.0-SNAPSHOT"
     version = VersionManager.resolveVersion(declaredVersion, project.hasProperty("release"))
 
     extra["templateApiVersion"] = "1.3.2"
